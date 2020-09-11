@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Second91</title>
+</head>
+<body>
+    <header>
+        <div id="logo" onclick="slowSkroll('#top')">
+            <span>Project-1</span>
+        </div>
+        <div id="about">
+            <a href="#" title="Возможности" onclick="slowSkroll('#main')">Возможности</a>
+           <a href="#" onclick="slowSkroll('#overiew')" title="Приемущества">Приемущества</a> 
+           <a href="#" onclick="slowSkroll('#contacts')" title="Контакти">Контакти</a>
+           <a href="#" onclick="slowSkroll('#faq')" title="Ответи">Ответи</a>  
+
+        </div>
+
+
+
+    </header>
+    <div id="top">
+        <H1>My life</H1>
+        <H3>My ruls</H3>
+    </div>
+    <div id="main">
+    <div class="intro">
+        <h2>Other facts</h2>
+        <span>Oh my God - nise work</span>
+    </div>
+
+    <div class="text">
+        <span><p>Краткая история фразы "My life, my Rules"</p>
+        <p>
+            Полиглот во мне захотел копнуть немного поглубже для само развития. Перевод впринципе не сложен, моя жизнь — мои регламенты, если уж совсем дословно, ну или правила, если удобнее.
+И так, что выдали первые ссылки в поисковике, самый сдержанный вариант был найден тут
+Что же я там нашел "В каком-то не важном для нас году молодые люди нетрадиционной ориентации собрались в Нью-Йорке для защиты своих прав.
+        </p>
+        </span>
+    </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    function slowSkroll (id) {
+        $('html, body'). animate ({
+        skrollTop: $(id). offset().top     
+
+        }, 500);
+    }   
+    $(document).on("scroll", function() {
+        if($(window).scrollTop()=== 0)
+        $("header").removeClass("fixed");
+        else
+        $("header").attr("class", "fixed");
+    });
+
+    
+    </script>
+
+</body>
+</html>
